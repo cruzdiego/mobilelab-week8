@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="MobileLabARKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QCs-B3-uqP">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-Q2-h4J">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dvM-XJ-HJJ">
+                                <rect key="frame" x="547" y="0.0" width="120" height="375"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJd-vr-51c">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="125"/>
+                                        <connections>
+                                            <action selector="insertLaserCutterReservedObjectPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="c0Y-XH-pNy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Kj-Ah-mPV">
+                                        <rect key="frame" x="0.0" y="125" width="120" height="125"/>
+                                        <connections>
+                                            <action selector="insertLaserCutterNotReservedObjectPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="GKv-j7-75h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfh-Nm-pd6">
+                                        <rect key="frame" x="0.0" y="250" width="120" height="125"/>
+                                        <connections>
+                                            <action selector="reserveLaserCutterPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="fgh-ji-IFv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="fPY-De-3Cb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RsA-Q2-h4J" firstAttribute="leading" secondItem="aR7-8j-WbC" secondAttribute="leading" id="1QA-B7-Eju"/>
+                            <constraint firstItem="aR7-8j-WbC" firstAttribute="trailing" secondItem="dvM-XJ-HJJ" secondAttribute="trailing" id="9Sj-PC-m2R"/>
+                            <constraint firstItem="dvM-XJ-HJJ" firstAttribute="top" secondItem="aR7-8j-WbC" secondAttribute="top" id="PJn-qX-4hR"/>
+                            <constraint firstItem="aR7-8j-WbC" firstAttribute="bottom" secondItem="dvM-XJ-HJJ" secondAttribute="bottom" id="REb-Lj-ZhS"/>
+                            <constraint firstItem="RsA-Q2-h4J" firstAttribute="bottom" secondItem="aR7-8j-WbC" secondAttribute="bottom" id="pye-sO-7dd"/>
+                            <constraint firstItem="RsA-Q2-h4J" firstAttribute="trailing" secondItem="aR7-8j-WbC" secondAttribute="trailing" id="qP1-38-MKl"/>
+                            <constraint firstItem="RsA-Q2-h4J" firstAttribute="top" secondItem="QCs-B3-uqP" secondAttribute="top" id="t5J-J5-rH7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aR7-8j-WbC"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="RsA-Q2-h4J" id="n7f-iJ-Wgb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35.532233883058474" y="32.799999999999997"/>
+        </scene>
+    </scenes>
+</document>
